@@ -6,14 +6,15 @@ export type RoutesType = {
     element: any,
     path: string,
     index: boolean,
+    name: string
 }
 
 const errorPage: string = '*'
 
 const routes: RoutesType[] = [
-    { element: <Home/>, path: ('' || 'home'), index: true },
-    { element: <Hub/>, path: 'hub', index: false },
-    { element: <Error404/>, path: errorPage, index: false },
+    { element: <Home/>, path: '', index: true, name: 'Home' },
+    { element: <Hub/>, path: '/hub', index: false, name: 'Hub' },
+    { element: <Error404/>, path: errorPage, index: false, name: '404' },
 ]
 
 export function is404(route: RoutesType) {

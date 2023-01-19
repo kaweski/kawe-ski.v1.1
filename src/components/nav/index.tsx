@@ -1,30 +1,26 @@
 import * as React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import routes, { is404 } from '../../pages/routes';
+import './nav.scss';
 
 export default function Nav() {
 
-    return (
-        <div>
-            <nav>
-                <ul>
-                    <>
-                        {routes
-                            .filter(is404)
-                            .map((route, key) => {
-                            return <li key={key}>
-                                <Link to={route.path}>{route.path}</Link>
-                            </li>
-                        })}
-                    </>
-                </ul>
-            </nav>
+    let location = useLocation();
 
-            <hr />
-            {/* An <Outlet> renders whatever child route is currently active,
-            so you can think about this <Outlet> as a placeholder for
-            the child routes we defined above. */}
-            <Outlet />
-        </div>
-    );
+    React.useEffect(() => {
+        console.log(location.pathname);
+    }, [location]);
+
+    return (
+        <ul className='tabs flex flex-row'>
+            {routes
+                .filter(is404)
+                .map((route, key) => {
+                return <li
+                    key={key}>
+                    <Link className={`tab flex flex-col ${location.pathname === route.path ? 'active' : ''}`} to={route.path}>{route.name}</Link>
+                </li>
+            })}
+        </ul>
+    )
 }
