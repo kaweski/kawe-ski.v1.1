@@ -1,8 +1,13 @@
+import React from 'react';
+import About from '../../components/about'
+import Social from '../../components/social';
+
 function Home() {
     return (
-        <div>
-            <h2>Home</h2>
-        </div>
+        <>
+            <About text='teste'/>
+            <Social text='teste'/>
+        </>
     );
 }
 

@@ -9,7 +9,7 @@ const root: any = document.getElementById("root");
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <App text='teste' />
     </BrowserRouter>
   </React.StrictMode>
 );

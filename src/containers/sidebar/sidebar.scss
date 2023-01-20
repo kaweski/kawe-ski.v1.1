@@ -1,0 +1,14 @@
+@import '../../styles/Basic';
+
+.sidebar {
+    height: 100%;
+    @media screen and (min-width: 1024px) {
+        &-left {
+            border-right: 1px solid $gray;
+        }
+    
+        &-right {
+            border-left: 1px solid $gray;
+        }
+    }
+}

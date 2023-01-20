@@ -15,7 +15,7 @@ export default function Nav() {
                 return <li
                     key={key}>
                     <Link 
-                        className={`tab flex flex-col ${location.pathname === route.path ? 'active' : ''}`}
+                        className={`tab text lightgray ${location.pathname === route.path ? 'active' : ''}`}
                         to={route.path}>
                             {route.name}
                     </Link>
