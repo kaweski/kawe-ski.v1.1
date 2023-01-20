@@ -1,8 +1,5 @@
 @import '../../styles/Basic';
 
-.tabs {
-}
-
 .tab {
     padding: $s-5 $s-8 $s-4;
     width: 100%;
@@ -11,10 +8,6 @@
     transition: all .2s ease-in-out;
     border-right: 2px dashed $black;
     border-radius: 40px 40px 0 0;
-
-    &:not(.active) {
-        opacity: .8;
-    }
 
     @media screen and (max-width: 768px) {
         border-radius: 24px 24px 0 0;

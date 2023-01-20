@@ -31,9 +31,6 @@ const Main: React.FC<Props> = ({
                     </Route>
                 </Routes>
                 <Outlet/>
-                <p className='abuble abuble-small lightgray text-center mt-6'>
-                    More coming soon...
-                </p>
             </main>
         </div>
     )

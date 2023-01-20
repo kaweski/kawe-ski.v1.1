@@ -8,7 +8,7 @@ export default function Nav() {
     let location = useLocation();
 
     return (
-        <ul className='tabs flex flex-row'>
+        <ul className='tabs flex flex-row justify-start align-start'>
             {routes
                 .filter(is404)
                 .map((route, key) => {

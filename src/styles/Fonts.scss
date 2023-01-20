@@ -76,16 +76,16 @@ strong {
     animation:rainbow 1s infinite;
 }
 
-// a {
-//     position: relative;
-//     &:not(.button) {
-//         color: $white;
-//         &:hover {
-//             text-decoration: none;
-//             border-bottom: 2px solid $gray;
-//         }
-//     }
-// }
+a {
+    position: relative;
+    &:not(.button) {
+        color: $white;
+        &:hover {
+            text-decoration: none;
+            border-bottom: 2px solid $gray;
+        }
+    }
+}
 
 @-webkit-keyframes rainbow {
     0% {color: #ff0000;}
