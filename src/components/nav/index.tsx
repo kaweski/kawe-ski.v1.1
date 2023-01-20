@@ -7,10 +7,6 @@ export default function Nav() {
 
     let location = useLocation();
 
-    React.useEffect(() => {
-        console.log(location.pathname);
-    }, [location]);
-
     return (
         <ul className='tabs flex flex-row'>
             {routes
@@ -18,7 +14,11 @@ export default function Nav() {
                 .map((route, key) => {
                 return <li
                     key={key}>
-                    <Link className={`tab flex flex-col ${location.pathname === route.path ? 'active' : ''}`} to={route.path}>{route.name}</Link>
+                    <Link 
+                        className={`tab flex flex-col ${location.pathname === route.path ? 'active' : ''}`}
+                        to={route.path}>
+                            {route.name}
+                    </Link>
                 </li>
             })}
         </ul>
