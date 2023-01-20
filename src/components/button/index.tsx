@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Button.scss';
-import './ButtonColors.scss';
+import './button.scss';
+import './buttonColors.scss';
 
 interface Props {
     icon?: boolean | false,

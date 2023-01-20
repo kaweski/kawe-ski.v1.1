@@ -1,6 +1,6 @@
 import React from "react";
-import fs from 'fs'; // access to the files
-import { join } from 'path';
+// import fs from 'fs'; // access to the files
+// import { join } from 'path';
 
 interface Props {
 }

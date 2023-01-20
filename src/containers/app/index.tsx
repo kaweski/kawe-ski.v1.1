@@ -9,9 +9,7 @@ interface Props {
     text: string
 }
 
-const App: React.FC<Props> = ({
-    text
-}) => {
+const App: React.FC<Props> = () => {
     return (
         <div className='xlg:grid xlg:grid-cols-10 lg:mt-40 flex flex-col mt-8 md:p-0 p-4'>
             <div></div>

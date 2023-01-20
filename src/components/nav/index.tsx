@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import routes from '../../pages/routes';
 import './nav.scss';
 
-export default function Nav() {
+const Logo: React.FC = () => {
 
     let location = useLocation();
 
@@ -24,3 +24,5 @@ export default function Nav() {
         </ul>
     )
 }
+
+export default Logo;

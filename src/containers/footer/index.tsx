@@ -1,8 +1,11 @@
-import * as React from "react";
+import React from 'react';
 import './footer.scss';
 
-export default function Footer() {
+interface Props {
+    text?: string
+}
 
+const Footer: React.FC<Props> = () => {
     return (
         <footer className='text-center flex flex-row justify-center'>
             <div className='abuble abuble-small lightgray'>
@@ -11,3 +14,5 @@ export default function Footer() {
         </footer>
     )
 }
+
+export default Footer;

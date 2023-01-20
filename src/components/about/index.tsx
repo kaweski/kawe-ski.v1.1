@@ -6,9 +6,7 @@ interface Props {
     text: string
 }
 
-const About: React.FC<Props> = ({
-    text
-}) => {
+const About: React.FC<Props> = () => {
     return (
         <div className='box mt-10'>
             <div className='flex-col xlg:p-10 p-4'>
