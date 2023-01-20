@@ -1,28 +1,26 @@
 import React from 'react';
 import './sidebar.scss'
 import Button from '../../components/button';
-import Post from '../../components/post';
+import Card from '../../components/card';
 import Photo4 from '../../media/photo4.png';
 import IconTwitter from '../../media/twitter.png';
 
 interface Props {
-    text: string
+    text?: string
 }
 
-const SidebarLeft: React.FC<Props> = ({
-    text
-}) => {
+const SidebarLeft: React.FC<Props> = () => {
     return (
         <div className='sidebar sidebar-left lg:pr-10 md:pr-4'>
                 <div className='p-4 box mb-10'>
-                    <Post
+                    <Card
                         title='to cocentrate'
                         image={Photo4}
                         content='Little songs to think, study, focus on work, concentrate, read and sleep.'
                         url='https://open.spotify.com/playlist/3IhEuFUth2uCuNXOlAtuhk?si=5922c786a51244a5'/>
                 </div>
                 <div className='p-4 box mb-4'>
-                    <Post
+                    <Card
                         title='to cocentrate'
                         image={Photo4}
                         content='Little songs to think, study, focus on work, concentrate, read and sleep.'
@@ -38,13 +36,11 @@ const SidebarLeft: React.FC<Props> = ({
     )
 }
 
-const SidebarRight: React.FC<Props> = ({
-    text
-}) => {
+const SidebarRight: React.FC<Props> = () => {
     return (
         <div className='sidebar sidebar-right lg:pl-10 md:pl-4'>
             <div className='box p-4 mb-10'>
-                <Post
+                <Card
                     title='to cocentrate'
                     image={Photo4}
                     content='Little songs to think, study, focus on work, concentrate, read and sleep.'

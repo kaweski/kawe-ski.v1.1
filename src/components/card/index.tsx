@@ -1,5 +1,5 @@
 import React from "react";
-import './post.scss';
+import './card.scss';
 import Button from '../button';
 import Icon from '../../media/go-link.svg';
 
@@ -8,14 +8,16 @@ interface Props {
     title: string,
     button?: boolean,
     content: string,
-    url: string
+    url: string,
+    external?: boolean
 }
 
-const Post: React.FC<Props> = ({
+const Card: React.FC<Props> = ({
     image,
     title,
     url,
-    content
+    content,
+    external
 }) => {
 
     return (
@@ -27,7 +29,7 @@ const Post: React.FC<Props> = ({
                 </h2>
                 <div className='flex flex-row justify-between gap-4'>
                     <div className='flex flex-col'>
-                        <Button url={url} icon={true} classes='button-white button-dark' content={Icon} />
+                        <Button url={url} icon={true} classes='button-white button-dark' content={Icon} external={external} />
                     </div>
                     <div className='flex flex-col'>
                         <div className='text lightgray'>
@@ -40,4 +42,4 @@ const Post: React.FC<Props> = ({
     )
 }
 
-export default Post;
+export default Card;

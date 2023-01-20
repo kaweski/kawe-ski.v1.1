@@ -19,16 +19,15 @@ const App: React.FC<Props> = ({
                 <Nav/>
                 <div className="lg:grid lg:grid-cols-4 lg:gap-10 md:grid md:grid-cols-2 flex flex-col gap-4">
                     <div className='lg:order-1 flex flex-col order-2'>
-                        <SidebarLeft text='teste'/>
+                        <SidebarLeft/>
                     </div>
                     <div className='lg:order-2 flex flex-col md:col-span-2 order-1'>
-                        <Main text='teste'/>
+                        <Main/>
                     </div>
                     <div className='flex flex-col order-3'>
-                        <SidebarRight text='teste'/>
+                        <SidebarRight/>
                     </div>
                 </div>
-                {/* <Posts /> */}
                 <Footer/>
             </div>
             <div></div>

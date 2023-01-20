@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, useLocation } from "react-router-dom";
-import routes, { is404 } from '../../pages/routes';
+import routes from '../../pages/routes';
 import './nav.scss';
 
 export default function Nav() {
@@ -10,7 +10,7 @@ export default function Nav() {
     return (
         <ul className='tabs flex flex-row justify-start align-start'>
             {routes
-                .filter(is404)
+                .filter((route) => route.show)
                 .map((route, key) => {
                 return <li
                     key={key}>

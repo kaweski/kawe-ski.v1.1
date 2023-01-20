@@ -74,7 +74,7 @@
         &:hover::after { border-color: $white; }
     }
 
-    &.disabled {
+    &.disabled, &.pressed {
         color: $lightgray;
         padding: 11px 5px 5px 11px;
         z-index: 0;

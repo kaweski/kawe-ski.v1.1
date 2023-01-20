@@ -5,12 +5,10 @@ import './main.scss';
 import Logo from '../../components/logo';
 
 interface Props {
-    text: string
+    text?: string
 }
 
-const Main: React.FC<Props> = ({
-    text
-}) => {
+const Main: React.FC<Props> = () => {
     return (
         <div className="flex flex-col p-10">
             <header>
