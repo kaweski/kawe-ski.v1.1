@@ -10,7 +10,7 @@ interface Props {
 
 const Main: React.FC<Props> = () => {
     return (
-        <div className="flex flex-col p-10">
+        <div className="flex flex-col">
             <header>
                 <Logo/>
                 <hr/>
