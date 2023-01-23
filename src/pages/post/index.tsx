@@ -1,28 +1,68 @@
-import React, { useContext, useEffect } from "react";
-import { PostsContext } from "../posts";
+// import React, { createContext, useCallback, useContext, useEffect, useState } from "react";
+import React from "react";
+// import { PropsPost } from "../posts";
 
+// export interface PostContextData {
+// 	post: PropsPost;
+// 	getPost: (postId: number) => void;
+// 	isLoading: boolean;
+// }
 
-function usePostsLoading() {
-    const { fetchPosts } = useContext(PostsContext);
+// export const postContentDefaultValue: PostContextData = {
+// 	post: { id: 0, body: '', title: '' },
+// 	getPost: () => null,
+// 	isLoading: false,
+// }
 
-    useEffect(() => {
-        console.log(fetchPosts);
-        fetchPosts();
-    }, [fetchPosts])
-}
+// export const PostContext = createContext<PostContextData>(postContentDefaultValue);
 
-const RenderPost = () => {
-	usePostsLoading();
+// function usePostLoading() {
+// 	const { getPost, post } = useContext(PostContext);
+
+// 	useEffect(() => {
+// 		getPost(post.id)
+// 	}, [getPost])
+
+// 	return {
+// 		post,
+// 		getPost
+// 	}
+// }
+
+// function usePostContentValueE(): PostContextData {
+// 	const [ post, setPost] = useState<PropsPost>();
+// 	const [ isLoading, setIsLoading ] = useState(false);
+
+// 	const getPost = useCallback((postId: number) => {
+// 		setIsLoading(true);
+// 		fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+// 			.then(response => response.json())
+// 			.then((fetchedPost: PropsPost) => {
+// 				setPost(fetchedPost);
+// 			})
+// 			.finally(() => {
+// 				setIsLoading(false);
+// 			});
+// 	}, [setPost, post])
+
+// 	return {
+// 		post,
+// 		getPost,
+// 		isLoading
+// 	}
+// }
+
+const Post: React.FC = () => {
+	// const context: PropsPost = useContext<PropsPost>(PostContext);
+	
 	return (
-		<>
-		</>
-	)
-}
-
-//
-function Post() {
-	return (
-        <RenderPost />
+		// <PostContext.Provider value={postContentDefaultValue}>
+		// 	<div key={context.id}>
+		// 		<h2 className='title white'>{context.title}</h2>
+		// 		<p className='text white'>{context.body}</p>
+		// 	</div>
+		// </PostContext.Provider>
+		<></>
 	);
 }
 

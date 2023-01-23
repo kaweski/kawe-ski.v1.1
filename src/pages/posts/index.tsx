@@ -1,14 +1,14 @@
 import React, { createContext, useCallback, useContext, useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-interface Props {
+export interface PropsPost {
 	id: number,
 	title: string,
 	body: string
 }
 
 export interface PostsContextData {
-    posts: Props[];
+    posts: PropsPost[];
     isLoading: boolean;
     fetchPosts: () => void;
 	getPost: (postId: number) => void;
@@ -34,10 +34,6 @@ function usePostsLoading() {
 function usePostsListManagement() {
 	const { posts, getPost } = useContext(PostsContext);
 	
-	// const handlePostRemove = useCallback((postId: number) => () => {
-	// 	removePost(postId);
-	// }, [removePost]);
-	
 	const singlePost = useCallback((postId: number) => () => {
 		getPost(postId)
 	}, [getPost])
@@ -50,20 +46,16 @@ function usePostsListManagement() {
 
 const PostsList = () => {
 	const { posts, singlePost } = usePostsListManagement();
-	const location = useLocation();
 
 	usePostsLoading();
 
-	useEffect(() => {
-		console.log(singlePost)
-	}, [singlePost])
-
-	function render(post: Props) {
+	function render(post: PropsPost) {
+		const slug = post.title.replaceAll(' ', '-')
 		return (
 			<div>
 				<h2 className='title white'>{post.title}</h2>
 				<p className='text white'>{post.body}</p>
-				<Link className='button button-dark text white button-orange' onClick={singlePost(post.id)} to={`posts/${location.pathname}`}>
+				<Link className='button button-dark text white button-orange' onClick={singlePost(post.id)} to={slug}>
 					<span className='content align-middle justify-center flex'>read more</span>
 				</Link>
 			</div>
@@ -82,8 +74,8 @@ const PostsList = () => {
 }
 
 function usePostsContextValue(): PostsContextData {
-	const [posts, setPosts] = useState<Props[]>([]);
-	let [post, setPost] = useState<Props[]>([]);
+	const [posts, setPosts] = useState<PropsPost[]>([]);
+	let [post, setPost] = useState<PropsPost[]>([]);
 	const [isLoading, setIsLoading] = useState(false);
 
 	const fetchPosts = useCallback(() => {
@@ -98,35 +90,17 @@ function usePostsContextValue(): PostsContextData {
 			})
 	}, [setPosts]);
 
-	// const removePost = useCallback((postId: number) => {
-	// 	setIsLoading(true);
-	// 	fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
-	// 		method: 'DELETE'
-	// 	})
-	// 	.then(() => {
-	// 		const newPosts = [...posts];
-	// 		const removedPostIndex = newPosts.findIndex(post => post.id === postId);
-	// 		if (removedPostIndex > -1) {
-	// 			newPosts.splice(removedPostIndex, 1);
-	// 		}
-	// 		setPosts(newPosts);
-	// 	})
-	// 	.finally(() => {
-	// 		setIsLoading(false);
-	// 	})
-	// }, [setPosts, posts]);
-
 	const getPost = useCallback((postId: number) => {
 		setIsLoading(true);
 		fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
 			.then(response => response.json())
 			.then((fetchedPost) => {
 				setPost(fetchedPost);
-				console.log(fetchedPost);
 			})
 			.finally(() => {
 				setIsLoading(false);
 			});
+			// eslint-disable-next-line
 	}, [setPost, post])
 
 	return {
