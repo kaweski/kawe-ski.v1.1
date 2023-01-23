@@ -1,30 +1,29 @@
-import React from "react";
-// import fs from 'fs'; // access to the files
-// import { join } from 'path';
+import React, { useContext, useEffect } from "react";
+import { PostsContext } from "../posts";
 
-interface Props {
+
+function usePostsLoading() {
+    const { fetchPosts } = useContext(PostsContext);
+
+    useEffect(() => {
+        console.log(fetchPosts);
+        fetchPosts();
+    }, [fetchPosts])
 }
 
-const Post: React.FC<Props> = () => {
-
-	// const postsDirectory = join(process.cwd(), './post/posts/');
-
-	// function getMarkdownsFiles() {
-	// 	/**
-	// 	 * Essa função diz, leia o nome de
-	// 	 * todos os arquivos dentro da pasta
-	// 	 * que eu especifiquei na variável
-	// 	 * postsDirectory e me retorne eles
-	// 	 * em uma array.
-	// 	 */
-	// 	return fs.readdirSync(postsDirectory);
-	// }
-
+const RenderPost = () => {
+	usePostsLoading();
 	return (
-		<article className='box p-4'>
-			{/* {getMarkdownsFiles()} */}
-		</article>
+		<>
+		</>
 	)
+}
+
+//
+function Post() {
+	return (
+        <RenderPost />
+	);
 }
 
 export default Post;
