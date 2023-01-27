@@ -1,9 +1,8 @@
 import Error404 from "./error404";
 import Home from "./home";
 import Hub from "./hub";
-// import Post from "./post";
-// import Posts from "./posts";
-import Tumblr from "./tumblr/tumblr.config";
+import Posts from "./posts";
+import Post from './post';
 
 export type RoutesType = {
     element: any,
@@ -17,12 +16,11 @@ export type RoutesType = {
 const errorPage: string = '*';
 
 const routes: RoutesType[] = [
-    { element: <Home/>, path: '', index: true, name: 'About', show: false },
-    { element: <Hub/>, path: '/hub', index: false, name: 'Hub', show: true },
+    { element: <Home/>, path: 'Hub', index: false, name: 'About', show: false },
+    { element: <Hub/>, path: '', index: true, name: 'Hub', show: true },
     { element: <Error404/>, path: errorPage, index: false, name: '404', show: false },
-    // { element: <Posts/>, path: '/posts', index: false, name: 'Posts', show: true },
-    // { element: <Post/>, path: '/posts/:post', index: false, name: ':post', show: false },
-    { element: <Tumblr/>, path: 'tumblr', index: false, name: 'Tumblr', show: true }
+    { element: <Posts/>, path: '/posts', index: false, name: 'Posts', show: false },
+    { element: <Post/>, path: '/posts/:post', index: false, name: 'Post', show: false }
 ]
 
 export default routes;

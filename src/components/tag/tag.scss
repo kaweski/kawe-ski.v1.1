@@ -7,9 +7,12 @@
     padding: calc($s-1 / 2) $s-2;
     box-shadow: 1px 1px 0 $black;
     color: $lightgray;
+    margin: $s-1;
+    text-transform: lowercase;
+    display: flex;
 
-    &:hover {
-        color: $white;
-        cursor: default;
-    }
+    // &:hover {
+    //     color: $white;
+    //     cursor: default;
+    // }
 }

@@ -1,0 +1,136 @@
+@import '../../styles/Basic';
+@import '../../components/tag/tag.scss';
+
+.post {
+    &-header {
+        background-color: #222;
+        .post {
+            &-date {
+                .tag {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+    &-footer {
+        background-color: $black;
+    }
+    &-body {
+        figure {
+            display: flex;
+        }
+
+        img {
+            width: 100%;
+            overflow: hidden;
+            border-radius: $s-4;
+            transform: scale(0.7);
+        }
+
+        iframe {
+            height: 300px !important;
+            width: 100% !important;
+            margin-bottom: -7%;
+        }
+
+        a {
+            border-bottom: 2px solid $pink;
+            &:hover {
+                @extend .rainbow;
+            }
+        }
+        
+        &>* {
+            margin-bottom: $s-4;
+        }
+
+        &>*:last-child {
+            margin-bottom: 0px;
+        }
+
+        h1 {
+            display: none;
+        }
+
+        h2 {
+            @extend .title;
+            font-size: 11px;
+            color: $white;
+        }
+
+        blockquote {
+            padding: $s-4;
+            border-left: 2px solid $pink;
+        }
+
+        ul, ol {
+            padding: 0px;
+            list-style-position: inside;
+            margin: $s-4 0;
+        }
+
+        ul {
+            list-style-type: circle;
+        }
+
+        ol {
+            list-style-type: armenian;
+        }
+
+        small {
+            background-color: $gray;
+            display: inline-block;
+            padding: 0 $s-2;
+            border-radius: $s-1;
+            box-shadow: 2px 2px 0 $black;
+            font-size: inherit;
+        }
+
+        .npf {
+            &_row {
+                float: left;
+            }
+
+            &_quote {
+                padding: $s-4;
+                background-color: $black;
+                border-radius: $s-2;
+                display: flex;
+                text-align: center;
+                color: $lightgray;
+                flex-direction: column;
+                
+                &:before,
+                &:after {
+                    content: '"';
+                    display: flex;
+                    color: $yellow;
+                    font-size: 19px;
+                    flex-grow: 0;
+                }
+                &:after {
+                    height: 100%;
+                    align-self: flex-end;
+                    color: $pink;
+                }
+            }
+
+            &_chat {
+                b {
+                    @extend .tag;
+                    @extend .text;
+                    border: none;
+                    display: inline-block;
+                    background-color: $yellow;
+                    color: $black;
+                }
+            }
+
+            &_quirky {
+                @extend .abuble;
+                @extend .abuble-big;
+            }
+
+        }
+    }
+}

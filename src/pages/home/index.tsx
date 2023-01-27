@@ -9,8 +9,8 @@ interface Props {
 const Home: React.FC<Props> = () => {
     return (
         <>
-            <About text='teste'/>
-            <Social text='teste'/>
+            {/* <About text='teste'/> */}
+            {/* <Social text='teste'/> */}
         </>
     )
 }

@@ -28,22 +28,29 @@ const Logo: React.FC = () => {
     // })
 
     return (
-        <ThemeContext.Provider value={theme}>
-            <h1 className='logo flex flex-row justify-between'>
-                <Link to='/' className='button button-icon button-orange button-dark'>
-                    <span className='content align-middle justify-center flex'>
-                        <img src={Icon} alt={Icon} />
-                    </span>
-                </Link>
-                <button 
-                    onClick={() => setTheme(theme === "light" ? "dark" : "light")} 
-                    className={changeTheme[theme].classes}>
-                        <span className='content align-middle justify-center flex'>
-                            {changeTheme[theme].content + ''}
-                        </span>
-                </button>
-            </h1>
-        </ThemeContext.Provider>
+    //     <ThemeContext.Provider value={theme}>
+    //         <h1 className='logo flex flex-row justify-between'>
+    //             <Link to='/' className='button button-icon button-orange button-dark'>
+    //                 <span className='content align-middle justify-center flex'>
+    //                     <img src={Icon} alt={Icon} />
+    //                 </span>
+    //             </Link>
+    //             <button 
+    //                 onClick={() => setTheme(theme === "light" ? "dark" : "light")} 
+    //                 className={changeTheme[theme].classes}>
+    //                     <span className='content align-middle justify-center flex'>
+    //                         {changeTheme[theme].content + ''}
+    //                     </span>
+    //             </button>
+    //         </h1>
+    //     </ThemeContext.Provider>
+        <h1 className='logo flex flex-row justify-between'>
+            <Link to='/' className='button button-icon button-orange button-dark'>
+                <span className='content align-middle justify-center flex'>
+                    <img src={Icon} alt={Icon} />
+                </span>
+            </Link>
+        </h1>
     )
 }
 

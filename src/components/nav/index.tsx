@@ -12,8 +12,7 @@ const Logo: React.FC = () => {
             {routes
                 .filter((route) => route.show)
                 .map((route, key) => {
-                return <li
-                    key={key}>
+                return <li key={key} className='flex'>
                     <Link 
                         className={`tab text lightgray ${location.pathname === route.path ? 'active' : ''}`}
                         to={route.path}>
