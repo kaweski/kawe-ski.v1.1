@@ -38,6 +38,10 @@ $coding: 'apple_regular';
     font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap'); // 'Space Mono'
+// @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap'); // 'Syne Mono'
+// @import url('https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap'); // 'Flow Circular'
+// @import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap'); // 'Nixie One'
 
 /**
 * SELECTION
@@ -71,11 +75,23 @@ figure {
     }
 }
 
+/**
+* RESET THE HTML AND BODY
+*/
+
+html {
+    font-size: 62.5%;
+    /* changes a default 16px font size to 10px */
+}
+
 body {
     background-color: $black;
     color: $white;
+    font-size: 1rem;
+    letter-spacing: -0.1rem;
+    line-height: 2rem;
     margin: 0px;
-    font-family: $coding, 'Courier New', Courier, monospace;
+    font-family: $coding, 'Space Mono', Courier, monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

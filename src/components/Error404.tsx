@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Box from './Box'
+import Button from './Button/Button'
 
 const Error: React.FC = () => {
     return (
         <Box>
             Oops! Something wrent wrong!
-            <Link to="/">Go to the home page</Link>
+            <Button url='/'>Go to the home page</Button>
         </Box>
     )
 }

@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react'
-import Button from '../Button/Button'
+import Button from './Button/Button'
 
 interface CardType {
     title: string,

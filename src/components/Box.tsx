@@ -6,7 +6,7 @@ const Box: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         padding: '16px',
         borderRadius: '16px',
         border: '1px solid gray',
-        backgroundColor: '#333',
+        backgroundColor: 'transparent',
         color: '#f5f5f5',
         margin: '2em'
     }

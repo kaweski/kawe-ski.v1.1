@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
-import Box from './Box'
 import Footer from './Footer'
 import Nav from './Nav'
 import routes from './Routes'
@@ -9,7 +8,7 @@ const App: React.FC = () => {
 
     return (
         <BrowserRouter>
-            <Box><Nav /></Box>
+            <Nav />
             <Routes>
                 <Route path="/">
                     {routes.map((route, key) => {
