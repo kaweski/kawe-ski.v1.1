@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "_src": false,
+        "node_modules": false,
+        "build": false,
+        ".vscode": false
+    },
+    "workspace.isHidden": false
+}

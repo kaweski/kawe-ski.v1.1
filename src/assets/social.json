@@ -1,0 +1,57 @@
+{
+    "paypal": {
+        "name": "Buy me a coffee",
+        "url": "https://www.paypal.com/donate/?business=7N2KWG5ZVG9YA&no_recurring=0&item_name=Hello%21%0AHelp+buying+me+a+coffee.+%E2%98%95%EF%B8%8F&currency_code=BRL",
+        "icon": ""
+    },
+    "email": {
+        "name": "Send me a letter",
+        "url": "mailto:nat@kawe.ski",
+        "icon": ""
+    },
+    "linkedin": {
+        "name": "Linkedin",
+        "url": "https://www.linkedin.com/in/kaweski",
+        "icon": ""
+    },
+    "dribbble": {
+        "name": "Dribbble",
+        "url": "https://dribbble.com/kaweski",
+        "icon": ""
+    },
+    "github": {
+        "name": "GitHub",
+        "url": "https://github.com/kaweski",
+        "icon": ""
+    },
+    "twitch": {
+        "name": "Twitch",
+        "url": "https://www.twitch.tv/naweskil",
+        "icon": ""
+    },
+    "youtube": {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/@naweskil372",
+        "icon": ""
+    },
+    "eagames": {
+        "name": "EA Games",
+        "url": "https://www.ea.com/pt-br/games/the-sims/the-sims-4/pc/gallery/browse?category=all&searchtype=ea_origin_id&sortby=downloads&time=all&searchquery=naweskil&max=50&maxis=false",
+        "icon": ""
+    },
+    "twitter": {
+        "name": "Twitter",
+        "url": "https://twitter.com/naweskil",
+        "icon": ""
+    },
+    "pinterest": {
+        "name": "Pinterest",
+        "url": "https://br.pinterest.com/naweskil",
+        "icon": ""
+    },
+    "spotify": {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/user/hipihipiurra?si=88aaed5c1a2447db",
+        "icon": ""
+    }
+}
